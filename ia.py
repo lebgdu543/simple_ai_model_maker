@@ -30,21 +30,21 @@ class ChatBot:
         for q, mots_cles in self.mots_cles.items():
             if all(mot in question for mot in mots_cles):
                 return self.database[q]
-        return "Je ne sais pas encore répondre à cette question."
+        return "I don't yet know how to answer that question."
 
     def conversation(self):
-        print("Bonjour !")
+        print("Hello !")
         self.charger_base_de_donnees()  
         while True:
-            question = input("Vous: ")
+            question = input("You: ")
             reponse = self.repondre(question)
             print("AI: ", reponse)
 
-            feedback = input("AI: Ai-je bien répondu ? (Oui/Non) ")
-            if feedback.lower() == "non":
-                nouvelle_reponse = input("AI: D'accord, quelle devrait être la réponse correcte ? ")
+            feedback = input("AI: Did I answer correctly? (y/n) ")
+            if feedback.lower() == "n":
+                nouvelle_reponse = input("AI: Okay, what should the correct answer be? ")
                 self.apprendre(question, nouvelle_reponse)
-                print("AI: Merci, j'ai appris quelque chose de nouveau !")
+                print("AI: Thanks, I've learned something new !")
 
 if __name__ == "__main__":
     chatbot = ChatBot()
