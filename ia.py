@@ -13,14 +13,14 @@ class ChatBot:
     def enregistrer_base_de_donnees(self):
         with open("base_de_donnees.txt", "w") as fichier:
             for question, reponse in self.database.items():
-                fichier.write(f"{question}:{reponse}\n")
+                fichier.write(f"{question}|{reponse}\n")
 
     def charger_base_de_donnees(self):
         try:
             with open("base_de_donnees.txt", "r") as fichier:
                 lignes = fichier.readlines()
                 for ligne in lignes:
-                    question, reponse = ligne.strip().split(":")
+                    question, reponse = ligne.strip().split("|")
                     self.database[question] = reponse
                     self.mots_cles[question] = set(question.split())
         except FileNotFoundError:
@@ -33,7 +33,7 @@ class ChatBot:
         return "I don't yet know how to answer that question."
 
     def conversation(self):
-        print("Hello !")
+        print("Hello ! don't use | for your security !")
         self.charger_base_de_donnees()  
         while True:
             question = input("You: ")
