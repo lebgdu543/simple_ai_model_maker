@@ -1,11 +1,9 @@
-This is just an exemple of how we can do this.  
+# It's a very simplified AI in python.
 
-It is a python based IA maker.
+## This is just an exemple of how we can do this.  
 
 It will prompt to you if he has correctly answer your question. If not you going to give him a response and he going to store this to a database.
 
-#Finelly he going to destroy all non-humans.
-
-I think to make a version for tkinter.
+~~ Finelly he going to destroy all non-humans. ~~
 
 Enjooy !
