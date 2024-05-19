@@ -4,6 +4,6 @@
 
 It will prompt to you if he has correctly answer your question. If not you going to give him a response and he going to store this to a database.
 
-~~Finelly he going to destroy all non-humans.~~
+~~Finelly it will destroy everyone of us.~~
 
 Enjooy !
